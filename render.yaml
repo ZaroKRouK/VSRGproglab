@@ -2,6 +2,7 @@ services:
   - type: web
     name: vsrglabs-web
     env: python
+    plan: free
     buildCommand: "./manage.py collectstatic --noinput"
     startCommand: "gunicorn django_project.wsgi:application"
     envVars:
