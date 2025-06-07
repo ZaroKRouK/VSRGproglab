@@ -12,3 +12,4 @@ services:
         value: postgresql://neondb_owner:npg_sJ0CWtnkF6dN@ep-odd-band-a84fg8rc-pooler.eastus2.azure.neon.tech/neondb?sslmode=require
       - key: SECRET_KEY
         generateValue: true
+
