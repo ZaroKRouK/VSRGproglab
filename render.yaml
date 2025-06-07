@@ -3,8 +3,8 @@ services:
     name: vsrglabs-web
     env: python
     plan: free
-    buildCommand: "./manage.py collectstatic --noinput"
-    startCommand: "gunicorn django_project.wsgi:application"
+    buildCommand: "python manage.py collectstatic --noinput"
+    startCommand: "gunicorn vsrglabs.wsgi:application"
     envVars:
       - key: DJANGO_SETTINGS_MODULE
         value: django_project.settings
