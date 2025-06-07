@@ -9,7 +9,7 @@ services:
       - key: DJANGO_SETTINGS_MODULE
         value: django_project.settings
       - key: DATABASE_URL
-        fromDatabase:
+        db:
           name: django_db
           property: connectionString
       - key: SECRET_KEY
