@@ -1,0 +1,85 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+    text-align: center;
+    font-size: 25px;
+}
+
+.nav_bar {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #1f2228;
+    z-index: 10;
+}
+
+.nav_bar a {
+    float: left;
+    display: block;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    padding: 14px 16px;
+    padding-left: 30px;
+    text-decoration: none;
+}
+
+.container {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+
+.rotating-image {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.overlay-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  opacity: 1;
+}
+
+
+.container:hover .rotating-image {
+  animation: rotate var(--rotate-speed, 0.3s) linear infinite;
+}
+
+
+.container:hover .overlay-image {
+  opacity: 0;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+ul {
+    list-style: disc inside;;
+}
+
+ol {
+    list-style-position: inside;
+}

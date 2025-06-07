@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>mainpage</title>
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main_style.css' %}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .fixed-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            z-index: 1000;
+        }
+
+        .menu-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        input#menu-toggle {
+            display: none;
+        }
+
+        label {
+            display: block;
+            cursor: pointer;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+        }
+
+        input:checked ~ .menu-content {
+            max-height: 200px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            padding: 10px;
+            background-color: #444;
+            border-bottom: 1px solid #555;
+        }
+
+        li:hover {
+            background-color: #555;
+        }
+
+        .b_photo {
+            margin-top: 100px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="fixed-menu">
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle">Меню</label>
+        <div class="menu-content">
+            <ul>
+                <li><a href="{% url 'history' %}"><span style="color:white;">История</span></a></li>
+                <li><a href="{% url 'library' %}"><span style="color:white;">Библиотека</span></a></li>
+                <li><a href="{% url 'login' %}"><span style="color:white;">Регистрация</span></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="b_photo">
+        <video src="{% static 'videos/VSRGprev.mp4' %}" class="first_video" autoplay muted loop></video>
+
+        <h1><em>Vertical Scrolling Rhythm Games</em></h1> 
+
+        <p> VSRG (Vertical Scrolling Rhythm Games) — это поджанр ритм-игр, где игроки синхронизируют нажатия клавиш или касания с нотами, которые движутся сверху вниз по экрану в такт музыке.<br> Этот жанр стал культовым благодаря сочетанию сложного геймплея, музыкального разнообразия и активного сообщества.</p>
+
+        <p>Ключевой элемент  — система оценки точности. Результат зависит от того, насколько близко к идеалу игрок попадает в ноты. <br>Оценки варьируются от «Perfect» до «Miss», а комбо-цепочка увеличивает множитель очков. Чем выше точность, тем больше шансов пройти уровень с максимальным рейтингом</p>
+
+        <p>Музыкальная составляющая — основа жанра. Саундтреки включают электронику, рок, классику, аниме-треки и оригинальные композиции.<br> Многие игры сотрудничают с музыкантами: например, Beat Saber включает треки из популярных альбомов, а Project Sekai использует песни Vocaloid.</p>
+
+        <p>Популярность VSRG объясняется сочетанием музыки, вызова и кастомизации. Игроки могут создавать собственные треки (в StepMania или osu!), менять скины интерфейса и участвовать в турнирах.<br> Прокачивая навыки, они чувствуют прогресс, а соревновательный аспект (рейтинги, стримы) поддерживает интерес.</p>
+
+        <p>Сообщества VSRG — активная часть культуры. Фанаты переводят игры, разрабатывают моды и проводят онлайн-чемпионаты. Платформы вроде Twitch и YouTube помогают делиться достижениями, а форумы объединяют энтузиастов со всего мира.</p>
+
+    </div>
+</body>
+</html> 

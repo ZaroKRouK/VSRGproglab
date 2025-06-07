@@ -1,0 +1,88 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.fixed-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1f2228;
+    color: white;
+    z-index: 1000;
+}
+
+.fixed-menu label {
+    background-color: #3d3d3d;
+    color: white;
+    padding: 20px 30px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.fixed-menu label:hover {
+    background-color: #878787;
+}
+
+input#menu-toggle {
+    display: none;
+}
+
+input:checked ~ .menu-content {
+    max-height: 200px;
+}
+
+.menu-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.menu-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-content li {
+    padding: 10px;
+    background-color: #444;
+    border-bottom: 1px solid #555;
+}
+
+.menu-content li:hover {
+    background-color: #555;
+}
+
+.menu-content li a {
+    color: white;
+    text-decoration: none;
+}
+
+.b_photo {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    margin-top: 100px;
+}
+
+.first_video {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    display: block;
+}
+
+.b_photo p {
+    margin-left: 5px;
+    margin-top: 40px;
+    font-size: 24px;
+    color: white;
+}

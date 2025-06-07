@@ -1,0 +1,54 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Bungee Spice', sans-serif;
+}
+
+.bungee-spice-regular {
+  font-family: "Bungee Spice", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.nav_bar {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1f2228;
+}
+.nav_bar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    font-size: 20px;
+    text-align: center;
+    padding: 14px 16px;
+    padding-left: 30px;
+    text-decoration: none;
+}
+
+.img_t {
+    max-width: 200px;
+}
+
+.all_games {
+    display: inline-block;
+}
+
+.games {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+}
+p {
+    text-align: center;
+}
