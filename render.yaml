@@ -4,7 +4,9 @@ services:
     env: python
     plan: free
     buildCommand: "python manage.py collectstatic --noinput"
+      poetry install
     startCommand: "gunicorn vsrglabs.wsgi:application"
+      poetry run daphne -b 0.0.0.0 -p 8000 django_project.asgi:application
     envVars:
       - key: DJANGO_SETTINGS_MODULE
         value: django_project.settings
@@ -12,4 +14,3 @@ services:
         value: postgresql://neondb_owner:npg_sJ0CWtnkF6dN@ep-odd-band-a84fg8rc-pooler.eastus2.azure.neon.tech/neondb?sslmode=require
       - key: SECRET_KEY
         generateValue: true
-
