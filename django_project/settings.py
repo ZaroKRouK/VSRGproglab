@@ -119,7 +119,14 @@ if not db_config.get("ENGINE"):
     db_config["ENGINE"] = "django.db.backends.postgresql"
 
 DATABASES = {
-    'default': db_config
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'vsrgdb',
+        'USER': 'vsrguser',
+        'PASSWORD': 'o9vyxSxCeGXW7aNF5dENJYIycdKj9v9z',
+        'HOST': 'dpg-d12dsfjuibrs73f4co00-a',  # <- вот это проблемное место
+        'PORT': '5432',
+    }
 }
 
 AUTH_PASSWORD_VALIDATORS = [
