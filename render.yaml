@@ -9,6 +9,8 @@ services:
       poetry run python manage.py migrate &&
       poetry run daphne -b 0.0.0.0 -p 8000 django_project.asgi:application
     envVars:
+      - key: DJANGO_ALLOWED_HOSTS
+        value: vsrglabs-web.onrender.com
       - key: DJANGO_SETTINGS_MODULE
         value: django_project.settings
       - key: DATABASE_URL
