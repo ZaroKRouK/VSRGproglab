@@ -3,9 +3,10 @@ services:
     name: vsrglabs-web
     env: python
     plan: free
-    buildCommand: "python manage.py collectstatic --noinput"
-      poetry install
-    startCommand: "gunicorn vsrglabs.wsgi:application"
+    buildCommand: poetry install --no-root
+    startCommand: |
+      poetry run python manage.py collectstatic --noinput &&
+      poetry run python manage.py migrate &&
       poetry run daphne -b 0.0.0.0 -p 8000 django_project.asgi:application
     envVars:
       - key: DJANGO_SETTINGS_MODULE
