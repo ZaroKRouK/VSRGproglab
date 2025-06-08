@@ -124,7 +124,7 @@ DATABASES = {
         'NAME': 'vsrgdb',
         'USER': 'vsrguser',
         'PASSWORD': 'o9vyxSxCeGXW7aNF5dENJYIycdKj9v9z',
-        'HOST': 'dpg-d12dsfjuibrs73f4co00-a',  # <- вот это проблемное место
+        'HOST': 'dpg-d12dsfjuibrs73f4co00-a.oregon-postgres.render.com',  # <- вот это проблемное место
         'PORT': '5432',
     }
 }
