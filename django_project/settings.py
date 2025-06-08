@@ -29,6 +29,7 @@ CSRF_TRUSTED_ORIGINS = [
     "https://06e830e2-b019-41aa-8f6b-81510d844989-00-j94ijnubinm8.sisko.replit.dev:8000",
     "https://77a983bf-f017-45e3-8c57-0a7d7da9f13b-00-27qdpk93g7fbp.sisko.replit.dev",
     "https://77a983bf-f017-45e3-8c57-0a7d7da9f13b-00-27qdpk93g7fbp.sisko.replit.dev:8000",
+    "https://vsrglabs-web.onrender.com"
 ]
 
 # Настройки cookie безопасности по умолчанию
@@ -60,6 +61,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -124,5 +126,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
