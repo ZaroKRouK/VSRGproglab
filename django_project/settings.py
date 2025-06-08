@@ -136,3 +136,11 @@ STATICFILES_DIRS = [
 ]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+print("DATABASE_URL =", os.getenv('DATABASE_URL'))  # отладка
+print("DATABASE CONFIG =", dj_database_url.config(
+    default='postgresql://vsrguser:o9vyxSxCeGXW7aNF5dENJYIycdKj9v9z@dpg-d12dsfjuibrs73f4co00-a/vsrgdb',
+    conn_max_age=600,
+    ssl_require=True
+))
