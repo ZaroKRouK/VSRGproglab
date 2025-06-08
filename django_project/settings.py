@@ -11,7 +11,11 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'django-insecure-4ju2n@$f9d0c=h)_g0l
 DEBUG = os.getenv('DJANGO_DEBUG', 'True') == 'True'
 
 # Разрешенные хосты — можно также передавать через переменную окружения
-ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', 'localhost,127.0.0.1,yourdomain.com').split(',')
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    'vsrglabs-web.onrender.com'
+]
 
 CSRF_TRUSTED_ORIGINS = [
     "https://*.replit.dev",
