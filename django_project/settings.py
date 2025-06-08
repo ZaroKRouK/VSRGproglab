@@ -109,12 +109,17 @@ TEMPLATES = [
     },
 ]
 
+db_config = dj_database_url.config(
+    default='postgresql://vsrguser:o9vyxSxCeGXW7aNF5dENJYIycdKj9v9z@dpg-d12dsfjuibrs73f4co00-a/vsrgdb',
+    conn_max_age=600,
+    ssl_require=True
+)
+
+if not db_config.get("ENGINE"):
+    db_config["ENGINE"] = "django.db.backends.postgresql"
+
 DATABASES = {
-    'default': dj_database_url.config(
-        default='postgresql://vsrguser:o9vyxSxCeGXW7aNF5dENJYIycdKj9v9z@dpg-d12dsfjuibrs73f4co00-a/vsrgdb',
-        conn_max_age=600,
-        ssl_require=True
-    )
+    'default': db_config
 }
 
 AUTH_PASSWORD_VALIDATORS = [
